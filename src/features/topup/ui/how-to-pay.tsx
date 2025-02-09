@@ -7,7 +7,7 @@ export const HowToPay = () => {
     const [isOpen, setOpen] = useState(false);
     return (
         <div className="w-full px-[1px] bg-border rounded-[15px]">
-            <div onClick={() => setOpen(!isOpen)} className={`flex flex-col relative py-[10px] px-[20px] ${isOpen ? ('') : ('')} bg-top text-white text-[14px] font-bold rounded-[20px]`}>
+            <div onClick={() => setOpen(!isOpen)} className={`flex flex-col relative py-[10px] px-[20px] ${isOpen ? ('') : ('')} bg-top text-white text-[14px] font-bold rounded-[15px]`}>
                 Как оплатить?
                 <div className="absolute right-[20px]">
                     {isOpen ? (

@@ -1,4 +1,4 @@
-import {CopyIcon} from "@/shared/icons";
+import {CopyIcon, TonIcon} from "@/shared/icons";
 
 export const WithdrawBlock = () => {
     return (
@@ -8,7 +8,8 @@ export const WithdrawBlock = () => {
                 <div className="w-full rounded-[10px] bg-border p-[1px]">
                     <div
                         className="flex w-full items-center justify-center h-[35px] bg-[#202020] rounded-[10px] text-[12px] font-semibold px-[20px] py-[5px]">
-                        ....
+                        <input placeholder="..." className="w-full text-center bg-transparent text-white outline-0"
+                               type="text"/>
                     </div>
                 </div>
             </div>
@@ -17,7 +18,8 @@ export const WithdrawBlock = () => {
                 <div className="w-full rounded-[10px] bg-border p-[1px]">
                     <div
                         className="flex w-full items-center justify-center h-[35px] bg-[#202020] rounded-[10px] text-[12px] font-semibold px-[20px] py-[5px]">
-                       0
+                        <input placeholder="0" className="w-full bg-transparent text-white outline-0" type="number"/>
+                        <TonIcon className="w-[14px] opacity-50 h-[14px]"/>
                     </div>
                 </div>
             </div>
@@ -26,7 +28,8 @@ export const WithdrawBlock = () => {
                 <div className="w-full rounded-[10px] bg-border p-[1px]">
                     <div
                         className="flex w-full items-center justify-center h-[35px] bg-[#202020] rounded-[10px] text-[12px] font-semibold px-[20px] py-[5px]">
-                        ....
+                        <input placeholder="..." className="w-full text-center bg-transparent text-white outline-0"
+                               type="text"/>
                     </div>
                 </div>
             </div>
