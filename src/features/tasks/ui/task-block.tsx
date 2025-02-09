@@ -16,7 +16,7 @@ export const TaskBlock: React.FC<Props> = ({ title, index }) => {
             transition={{
                 duration: 0.5,
                 ease: "easeOut",
-                delay: index * 0.1, // Добавляем задержку, зависящую от индекса
+                delay: index * 0.1,
             }}
         >
             <div className="bg-border rounded-[15px] p-[1px]">

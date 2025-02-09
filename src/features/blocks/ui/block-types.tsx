@@ -13,7 +13,7 @@ interface Props{
 
 export const BlockTypes:React.FC<Props> = ({activeTab, setActiveTab, tabs}) => {
     return (
-        <div className="w-full px-4 pb-[20px]">
+        <div className="w-full md:px-4 px-2 pb-[20px]">
             <div className="rounded-[13px] w-full bg-border p-[1px]">
                 <div
                     className="relative flex p-[1px] z-10 rounded-xl bg-top backdrop-blur-xl ">

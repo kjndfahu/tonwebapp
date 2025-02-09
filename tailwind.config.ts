@@ -9,6 +9,11 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xl: "400px",
+        md: "390px",
+        sm: "340px"
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

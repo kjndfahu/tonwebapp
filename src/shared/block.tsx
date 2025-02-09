@@ -2,24 +2,26 @@
 import {TonBlack, TonIcon} from "@/shared/icons";
 import {useState} from "react";
 import {ModalBuyBlock} from "@/features/blocks/ui/modal-buy-block";
+import {useTranslations} from "next-intl";
 
 export const Block = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const t = useTranslations('Blocks')
     return (
             <>
-                <div className="flex flex-col items-center justify-between bg-block rounded-[15px] w-[173px] h-[173px] p-[10px]">
+                <div className="flex flex-col items-center justify-between bg-block rounded-[15px] md:w-[173px] w-[165px] md:h-[173px] h-[165px] md:p-[10px] p-[5px]">
                     <div className="flex justify-between w-full">
                         <div
                             className="flex items-center backdrop-blur-2xl rounded-[5px] px-[18px] text-white bg-days justify-center text-[10px] h-[22px]">
-                            21 день
+                            21 {t('days')}
                         </div>
                         <div
                             className="flex items-center backdrop-blur-2xl rounded-[5px] px-[18px] text-gray-300 bg-days justify-center text-[10px] h-[22px]">
-                            42 сбора
+                            42 {t('fees')}
                         </div>
                     </div>
                     <div className="flex flex-col items-center font-bold text-[14px] text-white gap-[5px]">
-                        Награда
+                        {t('reward')}
                         <div className="flex items-center leading-[38px] text-white text-[32px] gap-[6px]">
                             <TonIcon className="w-[31px] h-[31px]"/>
                             3.47

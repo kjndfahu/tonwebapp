@@ -1,8 +1,9 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import {ArrowRight, TonIcon} from "@/shared/icons"
+import { TonIcon} from "@/shared/icons"
 import {UsersList} from "@/features/user/ui/users-list";
+import {useTranslations} from "next-intl";
 
 interface Props {
     isOpen: boolean
@@ -11,6 +12,7 @@ interface Props {
 
 export const ModalStatistics: React.FC<Props> = ({ isOpen, setIsOpen }) => {
     const [isClosing, setIsClosing] = useState(false)
+    const t = useTranslations('User')
 
     useEffect(() => {
         if (!isOpen) {
@@ -63,11 +65,11 @@ export const ModalStatistics: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                                 >
                                     ✕
                                 </button>
-                                <div className="text-lg text-white mb-[20px] font-medium">Статистика</div>
+                                <div className="text-lg text-white mb-[20px] font-medium">{t('stat')}</div>
                             </div>
 
                             <div className="flex  items-center justify-between font-bold text-[#c4c4c4] text-[14px] px-4">
-                                Рефералы
+                                {t('referrals')}
                                 <div className="flex items-center justify-center gap-1">
                                     <TonIcon className="w-[17px] opacity-70 h-[17px]"/>
                                     50

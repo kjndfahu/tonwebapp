@@ -2,6 +2,7 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ArrowRight, TonIcon, WarningIcon } from "@/shared/icons"
+import {useTranslations} from "next-intl";
 
 interface Props {
     isOpen: boolean
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
+    const t = useTranslations('ModalBlock')
     const [isClosing, setIsClosing] = useState(false)
 
     useEffect(() => {
@@ -62,16 +64,16 @@ export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                                 >
                                     ✕
                                 </button>
-                                <div className="text-lg mb-[20px] font-medium">Покупка блока</div>
+                                <div className="text-lg mb-[20px] font-medium">{t('buy-block')}</div>
                             </div>
 
                             <div className="bg-[#15130B] mx-4 rounded-[15px] backdrop-blur-2xl p-4 mb-[19px]">
                                 <div className="flex items-start gap-3">
-                                    <WarningIcon className="w-[30px] h-[30px]" />
+                                    <WarningIcon className="w-[30px] pt-[10px] h-[30px]" />
                                     <div className="flex flex-col">
-                                        <div className="text-yellow-500 font-bold">На счете недостаточно средств</div>
+                                        <div className="text-yellow-500 font-bold">{t('title')}</div>
                                         <div className="text-sm font-medium text-yellow-500">
-                                            Вы будете перенаправлены на страницу пополнения счета при нажатии на кнопку
+                                            {t('text')}
                                         </div>
                                     </div>
                                 </div>
@@ -79,18 +81,18 @@ export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
 
                             <div className="grid grid-cols-3 mx-4 gap-[5px] mb-[20px]">
                                 <div className="text-center">
-                                    <div className="text-white font-bold text-[12px]">Стоимость</div>
+                                    <div className="text-white font-bold text-[12px]">{t('cost')}</div>
                                     <div className="bg-price text-[20px] font-extrabold leading-[24px] rounded-lg py-2 px-3 gap-[5px] flex items-center justify-center">
                                         <TonIcon />
                                         3.47
                                     </div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-white font-bold text-[12px]">Дней</div>
+                                    <div className="text-white font-bold text-[12px]">{t('days')}</div>
                                     <div className="bg-[#8b8b8b] text-[20px] font-extrabold leading-[24px] rounded-lg py-2 px-3">21</div>
                                 </div>
                                 <div className="text-center">
-                                    <div className="text-white font-bold text-[12px]">Награда</div>
+                                    <div className="text-white font-bold text-[12px]">{t('reward')}</div>
                                     <div className="bg-prize rounded-lg text-white text-[20px] font-extrabold leading-[24px] gap-[5px] py-2 px-3 flex items-center justify-center">
                                         <TonIcon />
                                         3.47
@@ -99,12 +101,12 @@ export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                             </div>
 
                             <div className="text-[12px] mx-4 font-normal text-gray-400 text-center mb-[10px]">
-                                Получай награды каждые 12 часов в течении 21 дня
+                                {t('text2')}
                             </div>
 
                             <div className="w-full px-4">
                                 <button className="w-full bg-border text-[24px] font-extrabold gap-[10px] rounded-[15px] py-3 flex items-center justify-center">
-                                    <span>Подтвердить</span>
+                                    <span>{t('confirm')}</span>
                                     <ArrowRight />
                                     <div className="flex items-center text-[24px] font-extrabold gap-[5px] justify-center">
                                         <TonIcon className="w-[27px] h-[27px]" />

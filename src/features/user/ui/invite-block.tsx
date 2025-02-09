@@ -2,6 +2,7 @@
 
 import { CopyIcon, TgLogo } from "@/shared/icons"
 import { useEffect } from "react"
+import {useTranslations} from "next-intl";
 
 declare global {
     interface Window {
@@ -14,6 +15,8 @@ declare global {
 }
 
 export const InviteBlock = () => {
+    const t = useTranslations('User')
+
     useEffect(() => {
         const script = document.createElement("script")
         script.src = "https://telegram.org/js/telegram-web-app.js"
@@ -47,7 +50,7 @@ export const InviteBlock = () => {
             </div>
             <div className="bg-border w-full p-[1px] rounded-[15px] cursor-pointer" onClick={handleInvite}>
                 <div className="flex items-center justify-center gap-[5px] h-full bg-gradient w-full text-[16px] text-white font-bold rounded-[15px]">
-                    Пригласить друга
+                    {t('invitefriend')}
                     <TgLogo />
                 </div>
             </div>

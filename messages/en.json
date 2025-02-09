@@ -1,0 +1,69 @@
+{
+  "Top": {
+    "topup": "Top Up",
+    "withdraw": "Withdraw"
+  },
+  "Home": {
+    "blocks": "Blocks",
+    "text": "Activate blocks and earn rewards a TON!"
+  },
+  "Blocks": {
+    "allblocks": "All blocks",
+    "myblocks": "My blocks",
+    "days": "days",
+    "fees": "fees",
+    "reward": "Reward"
+  },
+  "ModalBlock": {
+    "buy-block": "Buying a block",
+    "title": "There are insufficient funds in the account",
+    "text": "You will be redirected to the recharge page when you click on the button",
+    "cost": "Cost",
+    "days": "Days",
+    "reward": "Reward",
+    "text2": "Get rewards every 12 hours for 21 days",
+    "confirm": "Confirm"
+  },
+  "Shop": {
+    "title": "Shop",
+    "text1": "Buy BLOCK coins and increase your",
+    "text2": "profitability forever!",
+    "yield": "to yield",
+    "nft": "Our NFT",
+    "description": "Description - NFT Collections",
+    "posted": "should be posted here",
+    "additional": "additional information"
+  },
+  "Tasks": {
+    "tasks": "Tasks",
+    "text": "Complete tasks and earn rewards at BLOCK!",
+    "task1": "Subscribe to the project channel",
+    "task2": "Join the project chat room",
+    "task3": "Invite 5 friends",
+    "task4": "Invite 20 friends",
+    "task5": "Invite 50 friends"
+  },
+  "Roulette": {
+    "spin": "Spin for"
+  },
+  "User": {
+    "ref": "Referral system",
+    "settings": "Settings",
+    "lang": "Language",
+    "earn": "Earn",
+    "friends": "on the profitability of friends in ",
+    "earned": "Earned",
+    "invited": "Invited",
+    "stat": "Statistics",
+    "referrals": "Referrals",
+    "invitefriend": "Invite a friend",
+    "nfts": "My NFTs",
+    "roadmap": "Roadmap",
+    "rules": "Game rules",
+    "text1": "Copy the address below",
+    "text2": "Insert the address in your wallet or on the exchange",
+    "text3": "Enter at least 0.2 TON for the transfer",
+    "text4": "text4",
+    "text5": "Confirm the transaction and wait for confirmation"
+  }
+}
