@@ -27,7 +27,7 @@ export const QuestionBlock = () => {
                             <div className="pt-[10px]">
                                 <WarningWhite />
                             </div>
-                            <div className="flex flex-col gap-1 font-semibold text-[13px]">
+                            <div className="flex flex-col gap-1 text-white font-semibold text-[13px]">
                                 Основные правила
                                 <div className="text-[12px] font-medium">
                                     <p>1. Правило под номером один</p>

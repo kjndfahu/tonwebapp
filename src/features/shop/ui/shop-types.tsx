@@ -25,8 +25,8 @@ export const ShopTypes:React.FC<Props> = ({activeTab, setActiveTab, tabs}) => {
                             relative z-20 w-full py-2.5 text-sm font-medium transition-colors duration-200 
                             ${activeTab === tab.id ? "text-white" : "text-gray-300"}`}
                         >
-            <span>
-              {tab.label} <span className=" text-[10px]">{tab.count}</span>
+            <span className="relative leading-[20px]">
+              {tab.label} <span className="absolute pl-[2px] top-[-5px] text-[10px]">{tab.count}</span>
             </span>
                             {activeTab === tab.id && (
                                 <motion.div

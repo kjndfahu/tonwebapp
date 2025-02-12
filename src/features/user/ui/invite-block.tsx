@@ -3,6 +3,7 @@
 import { CopyIcon, TgLogo } from "@/shared/icons"
 import { useEffect } from "react"
 import {useTranslations} from "next-intl";
+import { motion } from "framer-motion";
 
 declare global {
     interface Window {
@@ -48,12 +49,12 @@ export const InviteBlock = () => {
                     <CopyIcon />
                 </div>
             </div>
-            <div className="bg-border w-full p-[1px] rounded-[15px] cursor-pointer" onClick={handleInvite}>
+            <motion.div whileTap={{scale: 0.95}} className="bg-border w-full p-[1px] rounded-[15px] cursor-pointer" onClick={handleInvite}>
                 <div className="flex items-center justify-center gap-[5px] h-full bg-gradient w-full text-[16px] text-white font-bold rounded-[15px]">
                     {t('invitefriend')}
                     <TgLogo />
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }

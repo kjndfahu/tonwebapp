@@ -1,30 +1,26 @@
-'use client'
-import {BlockTypes} from "@/features/blocks/ui/block-types";
-import {AllBlocks} from "@/features/blocks/container/all-blocks";
-import {useState} from "react";
-import {ActiveBlocks} from "@/features/blocks/container/active-blocks";
+"use client";
 
-interface Tab {
-    id: string
-    label: string
-    count: number
-}
-
-const tabs: Tab[] = [
-    {id: "all", label: "Все блоки", count: 25},
-    {id: "my", label: "Мои блоки", count: 7},
-]
+import { BlockTypes } from "@/features/blocks/ui/block-types";
+import { AllBlocks } from "@/features/blocks/container/all-blocks";
+import { ActiveBlocks } from "@/features/blocks/container/active-blocks";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const Earn = () => {
-    const [activeTab, setActiveTab] = useState<string>(tabs[0].id)
+    const pathname = usePathname();
+    const isEnglish = pathname.startsWith("/en");
+
+    const tabs = [
+        { id: "all", label: isEnglish ? "All Blocks" : "Все блоки", count: 25 },
+        { id: "my", label: isEnglish ? "My Blocks" : "Мои блоки", count: 7 },
+    ];
+
+    const [activeTab, setActiveTab] = useState<string>(tabs[0].id);
+
     return (
         <>
             <BlockTypes tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
-            {activeTab === tabs[0].id ? (
-                <AllBlocks/>
-            ) : (
-                <ActiveBlocks/>
-            )}
+            {activeTab === "all" ? <AllBlocks /> : <ActiveBlocks />}
         </>
-    )
-}
+    );
+};

@@ -10,6 +10,7 @@
   "Blocks": {
     "allblocks": "All blocks",
     "myblocks": "My blocks",
+    "active": "Active blocks",
     "days": "days",
     "fees": "fees",
     "reward": "Reward"
@@ -44,7 +45,9 @@
     "task5": "Invite 50 friends"
   },
   "Roulette": {
-    "spin": "Spin for"
+    "spin": "Spin for",
+    "text1": "Play exciting games and",
+    "text2": "get generous rewards!"
   },
   "User": {
     "ref": "Referral system",
@@ -65,5 +68,15 @@
     "text3": "Enter at least 0.2 TON for the transfer",
     "text4": "text4",
     "text5": "Confirm the transaction and wait for confirmation"
+  },
+  "MiniGames": {
+    "roulette": "Roulette",
+    "lottery": "Lottery"
+  },
+  "Lottery": {
+    "start": "Start in",
+    "prize": "Total prize",
+    "get": "Participate",
+    "winners": "Past winners"
   }
 }

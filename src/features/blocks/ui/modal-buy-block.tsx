@@ -56,7 +56,7 @@ export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                         transition={{ type: "spring", damping: 25, stiffness: 300 }}
                         className="fixed z-[70] bottom-0 left-0 right-0 border-[3px] border-[#212121] bg-[#1E1E1E] rounded-t-[35px]"
                     >
-                        <div className="relative z-[70] py-4">
+                        <div className="relative text-white z-[70] py-4">
                             <div className="flex relative border-b-[1px] border-[#424242] justify-center items-center mb-4">
                                 <button
                                     className="absolute mx-4 left-0 top-[10%] w-[22px] h-[22px] flex text-[12px] items-center justify-center rounded-[10px] bg-[#404040]"
@@ -67,12 +67,13 @@ export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                                 <div className="text-lg mb-[20px] font-medium">{t('buy-block')}</div>
                             </div>
 
-                            <div className="bg-[#15130B] mx-4 rounded-[15px] backdrop-blur-2xl p-4 mb-[19px]">
+                            <div className="bg-[#19140066] mx-4 rounded-[15px] backdrop-blur-2xl p-4 mb-[19px]">
                                 <div className="flex items-start gap-3">
-                                    <WarningIcon className="w-[30px] pt-[10px] h-[30px]" />
+                                    <WarningIcon className="w-[30px] mt-[10px] h-[30px] min-w-[30px] min-h-[30px]"/>
                                     <div className="flex flex-col">
-                                        <div className="text-yellow-500 font-bold">{t('title')}</div>
-                                        <div className="text-sm font-medium text-yellow-500">
+                                        <div
+                                            className="text-yellow-500 sm:text-[16px] text-[14px] font-bold">{t('title')}</div>
+                                        <div className="sm:text-sm text-[12px] font-medium text-yellow-500">
                                             {t('text')}
                                         </div>
                                     </div>
@@ -82,7 +83,8 @@ export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                             <div className="grid grid-cols-3 mx-4 gap-[5px] mb-[20px]">
                                 <div className="text-center">
                                     <div className="text-white font-bold text-[12px]">{t('cost')}</div>
-                                    <div className="bg-price text-[20px] font-extrabold leading-[24px] rounded-lg py-2 px-3 gap-[5px] flex items-center justify-center">
+                                    <div
+                                        className="bg-price text-[20px] font-extrabold leading-[24px] rounded-lg py-2 px-3 gap-[5px] flex items-center justify-center">
                                         <TonIcon />
                                         3.47
                                     </div>

@@ -28,9 +28,14 @@ export default function ProgressBlock({current, total}: ProgressBlockProps) {
             <div className="w-full bg-border rounded-b-[10px] p-[1px]">
                 <div className="w-full h-[9px] relative bg-top rounded-b-[10px]">
                     <div
-                        className="absolute rounded-bl-[10px] top-0 left-0 h-full bg-gradient-to-r from-white/60 to-white/20 transition-all duration-300 ease-out"
-                        style={{width: `${percentage}%`}}
+                        className="absolute rounded-bl-[10px] top-0 left-0 h-full bg-gradient-to-r from-white/60 to-white/40 transition-all duration-300 ease-out"
+                        style={{
+                            width: `${percentage}%`,
+                            maskImage: "linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.3))",
+                            WebkitMaskImage: "linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.3))"
+                        }}
                     />
+
                 </div>
             </div>
         </div>

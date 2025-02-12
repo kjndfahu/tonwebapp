@@ -20,6 +20,7 @@ export default {
       },
       backgroundImage: {
         'gradient': "linear-gradient(112.83deg, rgba(255, 255, 255, 0.001) 50%, rgba(255, 255, 255, 0) 110.84%)",
+        'gradient2': "linear-gradient(130.43deg, #8C8C8C 0%, #242424 110%)",
         'border': "radial-gradient(121.49% 277.08% at 0% 0%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 100%)",
         'top': "linear-gradient(130.43deg, #6C6C6C 0%, #0A0A0A 110%)",
         'block': "url('https://i.yapx.ru/Yacf4.png')",

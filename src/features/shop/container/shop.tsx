@@ -1,31 +1,26 @@
-'use client'
+"use client";
 
-import {useState} from "react";
-import {ShopTypes} from "@/features/shop/ui/shop-types";
-import {TokensList} from "@/features/shop/ui/tokens-list";
-import {NFTList} from "@/features/shop/ui/nft-list";
-
-interface Tab {
-    id: string
-    label: string
-    count: number
-}
-
-const tabs: Tab[] = [
-    {id: "tokens", label: "Токены", count: 25},
-    {id: "nft", label: "NFT", count: 7},
-]
+import { useState } from "react";
+import { ShopTypes } from "@/features/shop/ui/shop-types";
+import { TokensList } from "@/features/shop/ui/tokens-list";
+import { NFTList } from "@/features/shop/ui/nft-list";
+import { usePathname } from "next/navigation";
 
 export const Shop = () => {
-    const [activeTab, setActiveTab] = useState<string>(tabs[0].id)
+    const pathname = usePathname();
+    const isEnglish = pathname.startsWith("/en");
+
+    const tabs = [
+        { id: "tokens", label: isEnglish ? "Tokens" : "Токены", count: 25 },
+        { id: "nft", label: isEnglish ? "NFT" : "NFT", count: 7 },
+    ];
+
+    const [activeTab, setActiveTab] = useState<string>(tabs[0].id);
+
     return (
         <>
             <ShopTypes tabs={tabs} activeTab={activeTab} setActiveTab={setActiveTab} />
-            {activeTab === tabs[0].id ? (
-                <TokensList/>
-            ) : (
-                <NFTList/>
-            )}
+            {activeTab === "tokens" ? <TokensList /> : <NFTList />}
         </>
-    )
-}
+    );
+};
