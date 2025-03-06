@@ -72,8 +72,8 @@ export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                                     <WarningIcon className="w-[30px] mt-[10px] h-[30px] min-w-[30px] min-h-[30px]"/>
                                     <div className="flex flex-col">
                                         <div
-                                            className="text-yellow-500 sm:text-[16px] text-[14px] font-bold">{t('title')}</div>
-                                        <div className="sm:text-sm text-[12px] font-medium text-yellow-500">
+                                            className="text-yellow-500 md:text-[16px] text-[14px] font-bold">{t('title')}</div>
+                                        <div className="md:text-[14px] md:leading-[16px] text-[12px] leading-[14px] font-medium text-yellow-500">
                                             {t('text')}
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@ export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                                     <div className="text-white font-bold text-[12px]">{t('cost')}</div>
                                     <div
                                         className="bg-price text-[20px] font-extrabold leading-[24px] rounded-lg py-2 px-3 gap-[5px] flex items-center justify-center">
-                                        <TonIcon />
+                                        <TonIcon className="w-[22px] aspect-square h-[22px]"/>
                                         3.47
                                     </div>
                                 </div>
@@ -96,7 +96,7 @@ export const ModalBuyBlock: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                                 <div className="text-center">
                                     <div className="text-white font-bold text-[12px]">{t('reward')}</div>
                                     <div className="bg-prize rounded-lg text-white text-[20px] font-extrabold leading-[24px] gap-[5px] py-2 px-3 flex items-center justify-center">
-                                        <TonIcon />
+                                        <TonIcon className="w-[22px] aspect-square h-[22px]"/>
                                         3.47
                                     </div>
                                 </div>

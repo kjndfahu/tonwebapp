@@ -31,7 +31,7 @@ export const UserContainer = () => {
     }, [pathname])
     return (
         <div
-            className="flex items-start flex-col text-center font-bold px-4 text-[#b2b2b2] pt-[15px] text-[16px] gap-[15px]">
+            className="flex w-full items-start flex-col text-center font-bold px-4 text-[#b2b2b2] pt-[15px] text-[16px] gap-[15px]">
             <h2>{t('ref')}</h2>
             <Referrals/>
             <InviteBlock/>

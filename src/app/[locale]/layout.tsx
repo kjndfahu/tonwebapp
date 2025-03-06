@@ -45,11 +45,9 @@ export default async function LocaleLayout({
 
     return (
         <NextIntlClientProvider locale={locale} messages={messages}>
-            <AppRoot className="flex flex-col bg-transparent h-[var(--tg-viewport-stable-height,100vh)]">
                 <main className="flex-1 overflow-y-auto scrollbar-hide overflow-x-hidden">
                     <div className="min-h-[var(--tg-viewport-stable-height,100vh)]">{children}</div>
                 </main>
-            </AppRoot>
         </NextIntlClientProvider>
     )
 }

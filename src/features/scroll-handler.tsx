@@ -5,29 +5,23 @@ import { useState, useEffect, useRef } from "react"
 import { Top } from "@/features/top/container/top"
 
 interface ScrollHandlerWrapperProps {
-    children: React.ReactNode,
+    children: React.ReactNode
 }
 
 export const ScrollHandlerWrapper: React.FC<ScrollHandlerWrapperProps> = ({ children }) => {
-    const [showTopTypes, setShowTopTypes] = useState(true)
-    const [prevScrollPos, setPrevScrollPos] = useState(0)
+    const [isScrolled, setIsScrolled] = useState(false)
     const mainRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         const handleScroll = () => {
             if (mainRef.current) {
-                const currentScrollPos = mainRef.current.scrollTop
-                const isScrollingDown = currentScrollPos > prevScrollPos
-                const isAtTop = currentScrollPos < 50
-
-                setShowTopTypes(isAtTop || !isScrollingDown)
-                setPrevScrollPos(currentScrollPos)
+                setIsScrolled(mainRef.current.scrollTop > 50)
             }
         }
 
         const mainElement = mainRef.current
         if (mainElement) {
-            mainElement.addEventListener("scroll", handleScroll)
+            mainElement.addEventListener("scroll", handleScroll, { passive: true })
         }
 
         return () => {
@@ -35,15 +29,15 @@ export const ScrollHandlerWrapper: React.FC<ScrollHandlerWrapperProps> = ({ chil
                 mainElement.removeEventListener("scroll", handleScroll)
             }
         }
-    }, [prevScrollPos])
+    }, [])
 
     return (
-        <>
-            <Top showTopTypes={showTopTypes} />
+        <div className="flex flex-col w-full max-w-[500px] h-screen overflow-hidden">
+            <Top isScrolled={isScrolled} />
             <main ref={mainRef} className="flex-1 overflow-y-auto scrollbar-hide overflow-x-hidden">
                 {children}
             </main>
-        </>
+        </div>
     )
 }
 

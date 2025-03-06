@@ -5,7 +5,7 @@ import {useTranslations} from "next-intl";
 export const LotteryInfo = () => {
     const t = useTranslations('Lottery')
     return (
-        <div className="flex flex-col justify-between w-full ">
+        <div className="flex flex-col md:py-[14px] py-[11px] md:pr-[14px] pr-[11px] justify-between w-full ">
             <div className="flex w-full justify-end gap-[5px] pr-[23px]">
                 <div
                     className="flex z-[50] items-center justify-center text-[#cbcbcb] rounded-[10px] font-bold md:text-[14px] sm:text-[12px] text-[11px] w-full bg-days h-[30px]">
@@ -24,7 +24,7 @@ export const LotteryInfo = () => {
                 {t('prize')}
             </div>
 
-            <motion.div whileTap={{scale: 0.95}} className="flex z-[70] items-center justify-center w-full bg-border h-[45px]  rounded-[12px] p-[1px]">
+            <motion.div whileTap={{scale: 0.95}} className="flex z-[70] items-center cursor-pointer justify-center w-full bg-border h-[45px]  rounded-[12px] p-[1px]">
                 <div className="flex items-center gap-2 font-bold md:text-[22px] text-[16px] text-white bg-gradient z-[71] rounded-[12px]">
                     {t('get')}
                     <ArrowRight/>

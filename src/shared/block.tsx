@@ -12,10 +12,10 @@ export const Block = () => {
         <>
             <div className="flex flex-col items-center justify-between bg-block rounded-[15px] w-[48%] bg-cover aspect-square p-[10px]">
                 <div className="flex justify-between w-full">
-                    <div className="flex items-center backdrop-blur-2xl rounded-[5px] px-[10%] text-white bg-days justify-center text-[0.6em] h-[22px]">
+                    <div className="flex items-center backdrop-blur-2xl rounded-[5px] px-[11%] text-white bg-days justify-center text-[0.55em] h-[22px]">
                         21 {t("days")}
                     </div>
-                    <div className="flex items-center backdrop-blur-2xl rounded-[5px] px-[10%] text-gray-300 bg-days justify-center text-[0.6em] h-[22px]">
+                    <div className="flex items-center backdrop-blur-2xl rounded-[5px] px-[11%] text-gray-300 bg-days justify-center text-[0.55em] h-[22px]">
                         42 {t("fees")}
                     </div>
                 </div>

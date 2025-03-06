@@ -1,9 +1,9 @@
 import type React from "react"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { TonIcon} from "@/shared/icons"
-import {UsersList} from "@/features/user/ui/users-list";
-import {useTranslations} from "next-intl";
+import { TonIcon } from "@/shared/icons"
+import { UsersList } from "@/features/user/ui/users-list"
+import { useTranslations } from "next-intl"
 
 interface Props {
     isOpen: boolean
@@ -12,7 +12,7 @@ interface Props {
 
 export const ModalStatistics: React.FC<Props> = ({ isOpen, setIsOpen }) => {
     const [isClosing, setIsClosing] = useState(false)
-    const t = useTranslations('User')
+    const t = useTranslations("User")
 
     useEffect(() => {
         if (!isOpen) {
@@ -54,37 +54,35 @@ export const ModalStatistics: React.FC<Props> = ({ isOpen, setIsOpen }) => {
                         initial="hidden"
                         animate={isClosing ? "exit" : "visible"}
                         exit="exit"
-                        transition={{type: "spring", damping: 25, stiffness: 300}}
+                        transition={{ type: "spring", damping: 25, stiffness: 300 }}
                         className="fixed z-[70] bottom-0 left-0 right-0 border-t-[3px] border-l-[3px] border-r-[3px] border-[#212121] bg-[#1E1E1E] rounded-t-[35px]"
                     >
-                        <div className="relative max-h-[390px] z-[70] py-4">
-                            <div
-                                className="flex relative border-b-[1px] border-[#424242] justify-center items-center mb-4">
+                        <div className="relative max-h-[390px] z-[70] py-4 overflow-hidden">
+                            <div className="flex relative z-[70] border-b-[1px] border-[#424242] justify-center items-center mb-4">
                                 <button
                                     className="absolute mx-4 left-0 top-[10%] w-[22px] h-[22px] flex text-[12px] items-center justify-center rounded-[10px] bg-[#404040]"
                                     onClick={handleClose}
                                 >
                                     ✕
                                 </button>
-                                <div className="text-lg text-white mb-[20px] font-medium">{t('stat')}</div>
+                                <div className="text-lg text-white mb-[20px] font-medium">{t("stat")}</div>
                             </div>
 
-                            <div
-                                className="flex  items-center justify-between font-bold text-[#c4c4c4] text-[14px] px-4">
-                                {t('referrals')}
+                            <div className="flex items-center justify-between font-bold text-[#c4c4c4] text-[14px] px-4">
+                                {t("referrals")}
                                 <div className="flex items-center justify-center gap-1">
-                                    <TonIcon className="w-[17px] opacity-70 h-[17px]"/>
+                                    <TonIcon className="w-[17px] opacity-70 h-[17px]" />
                                     50
                                 </div>
                             </div>
-                            <UsersList/>
+                            <UsersList maxHeight="250px" />
                             <div
-                                className="absolute bottom-0 w-full h-[200px] z-[12] bg-[#1e1e1e]"
+                                className="absolute bottom-0 left-0 right-0 h-[200px] pointer-events-none"
                                 style={{
-                                    maskImage: "linear-gradient(to top, rgba(0,0,0,5), rgba(0,0,0,0))",
-                                    WebkitMaskImage: "linear-gradient(to top, rgba(0,0,0,5), rgba(0,0,0,0))"
-                                }}>
-                            </div>
+                                    background: "linear-gradient(to top, #1e1e1e, rgba(30, 30, 30, 0))",
+                                    zIndex: 80,
+                                }}
+                            ></div>
                         </div>
                     </motion.div>
                 </>

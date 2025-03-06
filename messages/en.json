@@ -63,11 +63,11 @@
     "nfts": "My NFTs",
     "roadmap": "Roadmap",
     "rules": "Game rules",
-    "text1": "Copy the address below",
-    "text2": "Insert the address in your wallet or on the exchange",
-    "text3": "Enter at least 0.2 TON for the transfer",
-    "text4": "text4",
-    "text5": "Confirm the transaction and wait for confirmation"
+    "text1": "Buy blocks and earn a TON!",
+    "text2": "Take profits from a purchased block every 12 hours.",
+    "text3": "The in-game token BLOCK increases the yield a TON per block!",
+    "text4": "Collect NFTs and earn various bonuses and rewards!",
+    "text5": "Invite your friends and earn from their profits!"
   },
   "MiniGames": {
     "roulette": "Roulette",
@@ -78,5 +78,53 @@
     "prize": "Total prize",
     "get": "Participate",
     "winners": "Past winners"
+  },
+  "Roadmap": {
+    "name": "Formation of the game concept",
+    "description1": "1. Development of the game economy",
+    "description2": "2. Identify mechanics for earning and monetization",
+    "description3": "3. Development of the basic functionality of the game",
+    "name2": "Official launch",
+    "description21": "1. Conducting marketing campaigns to attract new players",
+    "description22": "2. Global events with exclusive NFTs",
+    "description23": "3. PRESALE a unique in-game token BLOCK with limited issuance",
+    "name3": "Implement in-game marketplace mechanics for exchange and resale",
+    "description31": "1. Possibility to withdraw to cadastral wallets NFT and token BLOCK",
+    "description32": "2. Integration with existing NFT marketplaces",
+    "description33": "3. PRESALE ending",
+    "name4": "Marketing campaign and popularization of own token",
+    "description41": "1. Listing of the BLOCK token on various CEX exchanges",
+    "description42": "2. Marketing campaign in foreign markets",
+    "description43": "3. Various offline activities"
+  },
+  "QuestionBlock": {
+    "rules": "Basic rules",
+    "question": "1. Rule number one"
+  },
+  "TopUp": {
+    "title": "How do I pay?",
+    "ques1": "Copy the address below",
+    "ques2": "Insert the address in your wallet or on the exchange",
+    "ques3": "Enter at least 0.2 TON for the transfer",
+    "ques4": "Check again",
+    "ques5": "Be sure to specify MEMO, otherwise your funds will be lost!",
+    "p1": "Ensure that the correct address and number of TON tokens are entered",
+    "p2": "The transfer will be processed on the blockchain, which can take a few minutes to complete",
+    "balance": "Balance management",
+    "warn1": "Send only TON to this address",
+    "warn2": "Other assets will be irrecoverable",
+    "warn3": "lost",
+    "address": "Refill address",
+    "remains": "Remains:",
+    "info1": "Please note, a 0.1 TON fee applies to all deposits.",
+    "info2": "Also, be sure to specify MEMO or the funds will be lost.",
+    "copy": "Copy the address",
+    "rules": "Withdrawal terms",
+    "with": "Withdrawal is available only to TON-address. Transfer to other accounts is not possible.",
+    "address2": "Withdrawal address",
+    "amount": "Withdrawal amount",
+    "confirm": "Confirm"
+
+
   }
 }

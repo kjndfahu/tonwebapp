@@ -7,7 +7,7 @@ export const ActiveBlock = () => {
     const t = useTranslations('Blocks')
     return (
         <div
-            className="flex flex-col items-center justify-between bg-block rounded-[15px] w-[48%] bg-cover aspect-square p-[10px]">
+            className="flex flex-col items-center justify-between bg-[url('/img/block.png')] rounded-[15px] w-[48%] bg-cover aspect-square p-[10px]">
             <div className="flex justify-between w-full">
                 <div
                     className="flex gap-[2px] items-center backdrop-blur-2xl w-[35px] rounded-[5px]  text-white bg-days justify-center text-[0.6em] h-[22px]">

@@ -1,8 +1,8 @@
-import {BlockIcon, TonIcon} from "@/shared/icons";
+import {BlockLogo, TonIcon} from "@/shared/icons";
 
 export const BalanceBlock = () => {
     return (
-        <div className="w-full px-4">
+        <div className="w-full z-[11] px-4">
             <div className="w-full bg-border shadow-2xl p-[1px] rounded-[15px]">
                 <div className="flex text-white w-full rounded-[15px] bg-gradient">
                     <div
@@ -12,7 +12,7 @@ export const BalanceBlock = () => {
                     </div>
                     <div
                         className="flex items-center text-[23px] font-extrabold gap-[5px] justify-center rounded-r-[15px] w-full h-[44px]">
-                        <BlockIcon className="w-[22px] h-[22px]"/>
+                        <BlockLogo className="rounded-[2px] w-[35px] h-[35px]"/>
                         1,050
                     </div>
                 </div>

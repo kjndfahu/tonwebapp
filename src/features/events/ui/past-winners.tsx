@@ -4,7 +4,7 @@ import {useTranslations} from "next-intl";
 export const PastWinners = () => {
     const t = useTranslations('Lottery')
     return (
-        <div className="flex flex-col items-center text-center gap-[7px] text-white text-[11px] leading-[13px] font-bold">
+        <div className="flex flex-col items-center text-center md:p-[14px] p-[11px] gap-[7px] text-white text-[11px] leading-[13px] font-bold">
             {t('winners')}
             <div className="flex flex-col gap-[6px]">
                 <WinnersBlock/>

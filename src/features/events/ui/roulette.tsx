@@ -28,8 +28,7 @@ export const Roulette = () => {
     }, [])
 
     const initializeItems = () => {
-        const { numbers } = generateRandomNumber()
-        setItems(numbers.map((number) => ({ value: "V", number })))
+        setItems(Array.from({ length: 28 }, (_, i) => ({ value: "V", number: i + 1 })));
     }
 
     useEffect(() => {
@@ -41,10 +40,10 @@ export const Roulette = () => {
     }, [y])
 
     useEffect(() => {
-        if (!isSpinning && result !== null) {
-            console.log("Вращение завершено. Результат:", result)
+        if (!isSpinning && 14 !== null) {
+            console.log("Вращение завершено. Результат:", 14)
         }
-    }, [isSpinning, result])
+    }, [isSpinning, 14])
 
     const handleSpin = async () => {
         if (!isSpinning) {
@@ -52,10 +51,10 @@ export const Roulette = () => {
             setResult(null)
 
             const numbers = Array.from({ length: TOTAL_ITEMS }, (_, i) => i + 1)
-            const result = 14
-            const targetIndex = 13 // Index of the 14th element (0-based)
+            const result = 2
+            const targetIndex = 13
             const centerOffset = Math.floor(VISIBLE_ITEMS / 2)
-            const targetPosition = ITEM_HEIGHT * (VISIBLE_ITEMS - 1.9) // Changed from 1 to 1.25
+            const targetPosition = ITEM_HEIGHT * (VISIBLE_ITEMS - 1.9)
             const spinDistance = ITEM_HEIGHT * TOTAL_ITEMS * EXTRA_ROTATIONS - targetPosition + targetIndex * ITEM_HEIGHT
 
             controls.set({ y: 0 })
@@ -89,9 +88,7 @@ export const Roulette = () => {
                         <motion.div
                             key={index}
                             className="h-[92px] w-[173px] bg-block-token bg-cover rounded-[20px] mb-[2px] flex items-center z-[100] justify-center"
-                            animate={{
-                                scale: result === item.number ? 1.15 : 1,
-                            }}
+
                             transition={{ duration: 0.3 }}
                         >
                             <div className="flex z-[100] items-center gap-3 px-4 py-2 rounded-xl">

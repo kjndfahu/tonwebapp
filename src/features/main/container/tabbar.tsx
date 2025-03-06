@@ -18,7 +18,7 @@ export const TabbarNavbar = () => {
     }, [pathname]);
 
     return (
-        <div className="w-full z-[50] fixed bottom-[-2px] bg-border p-[1px] rounded-t-[15px]">
+        <div className=" w-full max-w-[500px] z-[50] fixed bottom-[-2px] bg-border p-[1px] rounded-t-[15px]">
             <Tabbar className="flex bg-black/65 backdrop-blur-[25px] rounded-t-[15px] font-bold leading-[25px] text-[14px] items-center justify-between w-full sm:px-[48px] px-[24px] pt-[15px] pb-[24px]">
 
                 <Link href="/">
